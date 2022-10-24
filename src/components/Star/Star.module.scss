@@ -1,0 +1,19 @@
+.Stars {
+    // background-image: url("https://i.imgur.com/KAtR60N.png");
+    background-image: url("https://i.imgur.com/VUR3gjn.png");
+    display: inline-block;
+    background-repeat: repeat-x;
+    height: 1rem;
+    width: 80px;
+    background-size: 1rem 1rem;
+
+    &__Filled {
+        // background-image: url("https://i.imgur.com/KyclXc8.png");
+        background-image: url("https://i.imgur.com/oc4yL6h.png");
+        background-size: 1rem 1rem;
+        height: 1rem;
+        width: 55px; // change this 
+        display: block;
+        background-repeat: x;
+    }
+}

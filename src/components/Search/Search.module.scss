@@ -1,0 +1,41 @@
+.Search {
+    background-color: #F5EBE0;
+    display: flex;
+    border: 1px solid #E3D5CA;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 100vw;
+    max-width: 1000px;
+    padding: 0 1rem;
+
+    &__Input {
+        padding: 1rem;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        background-color: #F5EBE0;
+        color: #444444;
+        width: 100%;
+    }
+
+    &__Icons {
+        padding: 1rem 0;
+        font-size: 1rem;
+        color: #444444;
+    }
+
+    &__Clear {
+        padding: 1rem 1rem;
+        font-size: 1rem;
+        color: #444444;
+
+        &:hover {
+            color: #D6CCC2;
+            cursor: pointer;
+        }
+    }
+
+}
