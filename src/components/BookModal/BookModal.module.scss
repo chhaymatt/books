@@ -4,13 +4,19 @@
 }
 
 .BookModal {
-    background-color: #F5EBE0;
+    top: 1rem;
+    min-height: 80vh;
+    position: absolute;
+    background-color: rgba(245, 235, 224, 0.8);
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     border: 1px solid #E3D5CA;
     padding: 1rem;
     border-radius: 10px;
     max-width: 1000px;
+    width: 95vw;
+
 
     &__Clear {
         display: flex;
@@ -35,8 +41,10 @@
         flex-direction: row;
 
         img {
-            width: 100px;
+            width: 200px;
             border: 1px solid #E3D5CA;
+            -webkit-box-shadow: 10px 10px 20px 0px rgba(68,68,68,0.2); 
+            box-shadow: 10px 10px 20px 0px rgba(68,68,68,0.2);
         }
     }
 
@@ -45,17 +53,22 @@
         color: #444444;
     }
 
-    &__Heading {
+    &__Title {
         font-family: 'Playfair Display', serif;
         font-size: 2rem;
         color: #444444;
     }
 
+    &__Subtitle {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        color: #68605b;
+    }
+
     &__PublisherDescription {
-        margin-top: 1rem;
+        font-family: 'Playfair Display', serif;
         margin-bottom: 0.5rem;
         color: #444444;
-        font-family: 'Playfair Display', serif;
     }
 
     &__PublisherDescriptionText {
@@ -64,7 +77,6 @@
     }
 
     &__DescriptionGroups {
-        margin-top: 1rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -83,7 +95,7 @@
     &__DescriptionKey {
         font-size: 0.8rem;
         letter-spacing: 0.05rem;
-        color: #444444;
+        color: #68605b;
     }
 
     &__DescriptionValue {

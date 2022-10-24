@@ -1,5 +1,5 @@
 .Search {
-    background-color: #F5EBE0;
+    background-color: rgba(245, 235, 224);
     display: flex;
     border: 1px solid #E3D5CA;
     align-items: center;
@@ -7,16 +7,16 @@
     border-radius: 10px;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    width: 100vw;
-    max-width: 1000px;
     padding: 0 1rem;
+    backdrop-filter: blur(20px);
 
     &__Input {
         padding: 1rem;
         border: none;
         outline: none;
         font-size: 1rem;
-        background-color: #F5EBE0;
+        background-color: rgba(245, 235, 224);
+        backdrop-filter: blur(20px);
         color: #444444;
         width: 100%;
     }
@@ -36,6 +36,12 @@
             color: #D6CCC2;
             cursor: pointer;
         }
+    }
+
+    &__Result {
+        margin: 0.5rem 0;
+        color: #D6CCC2;
+        text-align: center;
     }
 
 }
