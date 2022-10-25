@@ -2,9 +2,9 @@
 import styles from "./App.module.scss"
 import BookModal from "./components/BookModal/BookModal"
 import Footer from "./components/Footer/Footer"
-import Search from "./components/Search/Search"
-import Gallery from "./containers/Gallery/Gallery"
 import Header from "./containers/Header/Header"
+import Main from "./containers/Main/Main"
+import ModalList from "./containers/ModalList/ModalList"
 
 
 
@@ -13,9 +13,8 @@ const App = () => {
   return (
     <div className={styles.App}>
       <Header></Header>
-      <Search></Search>
-      <Gallery></Gallery>
-      {/* <BookModal></BookModal> */}
+      <Main></Main>
+      <BookModal></BookModal>
       <Footer></Footer>
     </div>
   )

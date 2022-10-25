@@ -4,7 +4,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Rating from "../Rating/Rating";
 import Divider from "../Divider/Divider";
 
-const BookModal = () => {
+const BookModal = ({image, title, author, description}) => {
+    // Default Values
+    let titleDisplay = "No Title"
+    let authorDisplay = "No Author"
+    let descriptionDisplay = "No Description"
+    let imageDisplay = "https://i.imgur.com/F1Ur8RN.png"
+
+    if (image != undefined || image != null) {
+        imageDisplay = imageDisplay;
+    }
+
+    if (title != undefined || title != null) {
+        titleDisplay = title;
+    }
+
+    if (author != undefined || author != null) {
+        authorDisplay = author[0]
+    }
+
+    if (description != undefined || description != null) {
+        descriptionDisplay = description;
+    }
 
 
     return (

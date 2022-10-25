@@ -9,7 +9,7 @@ const Search = () => {
         <div>
             <div className={styles.Search}>
                 <FontAwesomeIcon className={styles.Search__Icons} icon={faMagnifyingGlass} />
-                <input className={styles.Search__Input}type="text" name="searchInput" id="searchInput" placeholder="Search" value="Harry Potter" />
+                <input className={styles.Search__Input}type="text" name="searchInput" id="searchInput" placeholder="Search"/>
                 <FontAwesomeIcon className={styles.Search__Clear} icon={faXmark} />
             </div>
             <div className={styles.Search__Result}>

@@ -1,9 +1,15 @@
 import styles from "./Card.module.scss"
 
 const Card = ({image, title, author, description}) => {
+    // Default Values
     let titleDisplay = "No Title"
     let authorDisplay = "No Author"
     let descriptionDisplay = "No Description"
+    let imageDisplay = "https://i.imgur.com/F1Ur8RN.png"
+
+    if (image != undefined || image != null) {
+        imageDisplay = image;
+    }
 
     if (title != undefined || title != null) {
         titleDisplay = title;
@@ -19,7 +25,7 @@ const Card = ({image, title, author, description}) => {
 
     return (
         <div className={styles.Card}>
-            <img className={styles.Card__Image} src={image}/>
+            <img className={styles.Card__Image} src={imageDisplay}/>
             <div className={styles.Card__Content}>
                 <h3 className={styles.Card__Title}>{titleDisplay}</h3>
                 <p className={styles.Card__Author}>{authorDisplay}</p>
