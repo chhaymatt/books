@@ -1,18 +1,23 @@
 import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card";
-import Books from "../../data.json"
 import { getData } from "../../services/books";
 
 const CardList = () => {
     const [books, setBooks] = useState([])
 
+    // Created another async function to await returned promise from getData
+    const data = async () => {
+        setBooks(await getData("Harry Potter"))
+    }
+
     useEffect(() => {
-        setBooks(getData("Hello"))
+        // setBooks(getData("Harry Potter")) // PROBLEM
+        // getData("Harry Potter").then((books) => setBooks(books)) // Other option
+        data()
     },[])
 
     return (
-        <div>
-            {books && books.map((book, index) => (
+        books && books.map((book, index) => (
             <Card
                 key={index} 
                 image={book.volumeInfo.imageLinks.thumbnail}
@@ -20,9 +25,7 @@ const CardList = () => {
                 author={book.volumeInfo.authors}
                 description={book.volumeInfo.description}>
             </Card>
-            ))
-        
-            }</div>    
+        ))   
     )
 }
 

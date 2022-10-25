@@ -9,11 +9,11 @@ const Search = () => {
         <div>
             <div className={styles.Search}>
                 <FontAwesomeIcon className={styles.Search__Icons} icon={faMagnifyingGlass} />
-                <input className={styles.Search__Input}type="text" name="searchInput" id="searchInput" placeholder="Search" />
+                <input className={styles.Search__Input}type="text" name="searchInput" id="searchInput" placeholder="Search" value="Harry Potter" />
                 <FontAwesomeIcon className={styles.Search__Clear} icon={faXmark} />
             </div>
             <div className={styles.Search__Result}>
-                <p>Showing 10 results for "Hello"</p>
+                <p>Showing 10 results for "Harry Potter"</p>
             </div>
         </div>
     )

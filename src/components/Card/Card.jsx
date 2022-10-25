@@ -6,7 +6,7 @@ const Card = ({image, title, author, description}) => {
     let descriptionDisplay = "No Description"
 
     if (title != undefined || title != null) {
-        titleDisplay = title.slice(0,30)
+        titleDisplay = title;
     }
 
     if (author != undefined || author != null) {

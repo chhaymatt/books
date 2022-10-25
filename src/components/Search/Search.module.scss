@@ -9,6 +9,8 @@
     margin-top: 1rem;
     padding: 0 1rem;
     backdrop-filter: blur(20px);
+    min-width: 80vw;
+    max-width: 800px;
 
     &__Input {
         padding: 1rem;
@@ -28,6 +30,8 @@
     }
 
     &__Clear {
+        position: absolute;
+        right: 0;
         padding: 1rem 1rem;
         font-size: 1rem;
         color: #444444;
@@ -42,6 +46,7 @@
         margin: 0.5rem 0;
         color: #D6CCC2;
         text-align: center;
+        height: 2rem;
     }
 
 }

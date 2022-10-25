@@ -6,12 +6,11 @@
 .BookModal {
     top: 1rem;
     min-height: 80vh;
-    position: absolute;
+    // position: absolute;
     background-color: rgba(245, 235, 224, 0.9);
     backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
-    border: 1px solid #E3D5CA;
     padding: 1rem;
     border-radius: 10px;
     max-width: 1000px;
@@ -19,15 +18,26 @@
 
 
     &__Clear {
+        right: 1rem;
+        position: absolute;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        align-items: center; 
+        width: 50px;
+        height: 50px;
+        background-color: #bcb0a7;
+        border-radius:100%;
+        &:hover {
+            background-color: #68605b;
+        }
     }
 
     &__Icons {
+        font-size: 3rem;
         padding: 1rem;
         position: absolute;
-        height: 1rem;
-        width: 1rem;
+        height: 1.5rem;
+        width: 1.5rem;
         color: #444444;
 
         &:hover {
