@@ -1,8 +1,11 @@
 import styles from "./Footer.module.scss"
 const Footer = () => {
+    const year = new Date().getFullYear()
+
+
     return (
         <footer className={styles.Footer}>
-            <p>2022 | Made by Matthew Chhay</p>
+            <a target="_blank" className={styles.Footer__Link} href="https://matthewchhay.com/">{`${year} | Made by Matthew Chhay`}</a>
         </footer>
     )
 }

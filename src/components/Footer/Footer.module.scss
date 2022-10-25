@@ -1,4 +1,15 @@
 .Footer {
-    margin: 1rem;
-    color: #D6CCC2;
+    margin: 2rem;
+
+    &__Link {
+        padding: 0.5rem 1rem;
+        color: #D6CCC2;
+        text-decoration: none;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #D6CCC2;
+            color: #444444;
+        }
+    }
 }

@@ -14,7 +14,7 @@ const Card = ({image, title, author, description}) => {
     }
 
     if (description != undefined || description != null) {
-        descriptionDisplay = `${description.slice(0,100)}...`
+        descriptionDisplay = `${description.slice(0,120)}...`
     }
 
     return (
