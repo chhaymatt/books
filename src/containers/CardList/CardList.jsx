@@ -1,7 +1,10 @@
 import Card from "../../components/Card/Card";
 import Books from "../../data.json"
+import { getData } from "../../services/books";
 
 const CardList = () => {
+    // const Books = getData("Hello");
+    // console.log(Books);
     return (
         Books.items.map((book, index) => (
         <Card
