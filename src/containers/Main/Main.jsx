@@ -6,7 +6,7 @@ const Main = () => {
     return (
         <main className={styles.Main}>
             <Search></Search>
-            <Gallery></Gallery>
+            <Gallery input="Harry Potter"></Gallery>
         </main>
     )
 }

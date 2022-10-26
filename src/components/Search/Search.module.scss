@@ -34,6 +34,7 @@
         padding: 1rem 1rem;
         font-size: 1rem;
         color: #444444;
+        user-select: none;
 
         &:hover {
             color: #D6CCC2;
@@ -46,6 +47,7 @@
         color: #D6CCC2;
         text-align: center;
         height: 2rem;
+        user-select: none;
     }
 
 }

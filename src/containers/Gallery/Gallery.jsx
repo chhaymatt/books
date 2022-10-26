@@ -2,10 +2,10 @@ import styles from "./Gallery.module.scss"
 import CardList from "../CardList/CardList"
 
 
-const Gallery = () => {
+const Gallery = ({input}) => {
     return (
         <div className={styles.Gallery}>
-            <CardList></CardList>
+            <CardList input={input}></CardList>
         </div>
     )
 }

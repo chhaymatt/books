@@ -8,7 +8,7 @@ const Card = ({image, title, author, description}) => {
     let imageDisplay = "https://i.imgur.com/F1Ur8RN.png"
 
     if (image != undefined || image != null) {
-        imageDisplay = image;
+        imageDisplay = image.thumbnail;
     }
 
     if (title != undefined || title != null) {

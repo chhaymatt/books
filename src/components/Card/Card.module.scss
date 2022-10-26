@@ -12,7 +12,8 @@
     background-color: rgba(245, 235, 224, 0.8);
     backdrop-filter: blur(20px);
     border-radius: 10px;
-
+    user-select: none;
+    
     &:hover {
         background-color: #E3D5CA;
         cursor: pointer;
@@ -21,8 +22,7 @@
     &__Content {
         display: flex;
         flex-direction: column;
-        align-items:baseline;
-        overflow: auto;
+        width: 100%;
 
     }
 
@@ -36,6 +36,7 @@
         padding: 1rem;
         background-color: rgba(245, 235, 224, 1);
         object-fit: scale-down;
+        user-select: none;
     }
 
     &__Title {
