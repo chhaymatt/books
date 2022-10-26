@@ -52,7 +52,7 @@ const Search = ({onSearch}) => {
                     <input className={styles.Search__Input} onChange={onInputChange} onKeyPress={handleEnter} type="text" name="searchInput" id="searchInput" placeholder="Search" value={formState.searchInput}/>
                     <FontAwesomeIcon className={styles.Search__Clear} icon={faXmark} onClick={clearInput}/>
                 </div>
-                <div className={styles.ToggleBar}>
+                <div className={styles.Search__ToggleBarGroup}>
                     <div className={styles.Search__ToggleBar}>
                         <div>Results per page</div>
                         <select className={styles.Search__Dropdown} onChange={onInputChange} name="maxResults" >
