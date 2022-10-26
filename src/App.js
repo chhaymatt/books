@@ -14,7 +14,7 @@ const App = () => {
     <div className={styles.App}>
       <Header></Header>
       <Main></Main>
-      <BookModal></BookModal>
+      {/* <BookModal></BookModal> */}
       <Footer></Footer>
     </div>
   )

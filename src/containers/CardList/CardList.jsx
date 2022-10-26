@@ -2,19 +2,17 @@ import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card";
 import { getData } from "../../services/books";
 
-const CardList = ({input}) => {
+const CardList = ({query}) => {
     const [books, setBooks] = useState([])
 
     // Created another async function to await returned promise from getData
-    const data = async () => {
-        setBooks(await getData(input))
-    }
+    // const data = async () => {
+    //     setBooks(await getData(query))
+    // }
 
     useEffect(() => {
-        // setBooks(getData("Harry Potter")) // PROBLEM
-        // getData("Harry Potter").then((books) => setBooks(books)) // Other option
-        data()
-    },[])
+        getData(query).then((books) => setBooks(books))
+    },[query])
 
     return (
         books && books.map((book, index) => (

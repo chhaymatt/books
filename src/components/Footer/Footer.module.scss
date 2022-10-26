@@ -1,11 +1,12 @@
 .Footer {
     margin: 2rem;
-
+    text-align: center;
     &__Link {
         padding: 0.5rem 1rem;
         color: #D6CCC2;
         text-decoration: none;
         border-radius: 10px;
+        
 
         &:hover {
             background-color: #D6CCC2;
