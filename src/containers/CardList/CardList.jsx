@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card";
 import { getData } from "../../services/books";
 
-const CardList = ({query, books, setBooks, result, setResult}) => {
-    // const [books, setBooks] = useState([])
+const CardList = ({query, setResult}) => {
+    const [books, setBooks] = useState([])
 
     // Created another async function to await returned promise from getData
     // const data = async () => {
