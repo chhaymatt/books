@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card";
 import { getData } from "../../services/books";
 
-const CardList = ({query}) => {
-    const [books, setBooks] = useState([])
+const CardList = ({query, books, setBooks, result, setResult}) => {
+    // const [books, setBooks] = useState([])
 
     // Created another async function to await returned promise from getData
     // const data = async () => {
@@ -11,7 +11,7 @@ const CardList = ({query}) => {
     // }
 
     useEffect(() => {
-        getData(query).then((books) => setBooks(books))
+        getData(query).then((books) => setBooks(books)).catch(err => setResult(err.message))
     },[query])
 
     return (
@@ -21,7 +21,10 @@ const CardList = ({query}) => {
                 image={book.volumeInfo.imageLinks}
                 title={book.volumeInfo.title}
                 author={book.volumeInfo.authors}
-                description={book.volumeInfo.description}>
+                description={book.volumeInfo.description}
+                id={book.id}
+                >
+    
             </Card>
         ))   
     )

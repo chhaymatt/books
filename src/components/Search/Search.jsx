@@ -3,14 +3,13 @@ import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react"
 
-const Search = ({onSearch}) => {
+const Search = ({onSearch, result, setResult}) => {
     const initialState = {
         searchInput: "",
         maxResults: 10,
         orderBy: "relevance"
     }
 
-    const [result, setResult] = useState("Start by typing a few words")
 
     const [formState, setFormState] = useState(initialState)
     
@@ -63,7 +62,7 @@ const Search = ({onSearch}) => {
                         </select>
                     </div>
                     <div className={styles.Search__ToggleBar}>
-                        <div>Sorted by</div>
+                        <div>Sort by</div>
                         <select className={styles.Search__Dropdown} onChange={onInputChange} name="orderBy" >
                             <option value="relevance">Relevance</option>
                             <option value="newest">Newest</option>

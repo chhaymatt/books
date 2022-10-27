@@ -3,10 +3,8 @@
     padding: 0;
 }
 
-.BookModal {
+.Modal {
     top: 1rem;
-    min-height: 80vh;
-    // position: absolute;
     background-color: rgba(245, 235, 224, 0.9);
     backdrop-filter: blur(20px);
     display: flex;
@@ -73,6 +71,10 @@
         font-family: 'Playfair Display', serif;
         font-size: 1.5rem;
         color: #68605b;
+    }
+
+    &__Authors {
+        margin-top: 1rem;
     }
 
     &__PublisherDescription {

@@ -1,6 +1,7 @@
 import styles from "./Card.module.scss"
+import { NavLink } from "react-router-dom"
 
-const Card = ({image, title, author, description}) => {
+const Card = ({image, title, author, description, id}) => {
     // Default Values
     let titleDisplay = "No Title"
     let authorDisplay = "No Author"
@@ -24,14 +25,16 @@ const Card = ({image, title, author, description}) => {
     }
 
     return (
-        <div className={styles.Card}>
-            <img className={styles.Card__Image} src={imageDisplay}/>
-            <div className={styles.Card__Content}>
-                <h3 className={styles.Card__Title}>{titleDisplay}</h3>
-                <p className={styles.Card__Author}>{authorDisplay}</p>
-                <p className={styles.Card__Description}>{descriptionDisplay}</p>
+        <NavLink to={`search/${id}`}>
+            <div className={styles.Card}>
+                <img className={styles.Card__Image} src={imageDisplay}/>
+                <div className={styles.Card__Content}>
+                    <h3 className={styles.Card__Title}>{titleDisplay}</h3>
+                    <p className={styles.Card__Author}>{authorDisplay}</p>
+                    <p className={styles.Card__Description}>{descriptionDisplay}</p>
+                </div>
             </div>
-        </div>
+        </NavLink>
     )
 }
 

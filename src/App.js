@@ -1,10 +1,9 @@
-// import {useState} from "react"
 import styles from "./App.module.scss"
-import BookModal from "./components/BookModal/BookModal"
 import Footer from "./components/Footer/Footer"
-import Header from "./containers/Header/Header"
 import Main from "./containers/Main/Main"
-import ModalList from "./containers/ModalList/ModalList"
+import Header from "./containers/Header/Header"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import ModalList from "./containers/ModalView/ModalView"
 
 
 
@@ -13,7 +12,14 @@ const App = () => {
   return (
     <div className={styles.App}>
       <Header></Header>
-      <Main></Main>
+      
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main></Main>}></Route>
+        <Route path="/search/:id" element={<ModalList></ModalList>}></Route>
+      </Routes>
+
+      </BrowserRouter>
       {/* <BookModal></BookModal> */}
       <Footer></Footer>
     </div>
