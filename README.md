@@ -6,7 +6,7 @@ https://chhaymatt.github.io/books/
 An app where a user can search for books from Google Book's API using React JS, React Router and Asynchronous programming
 
 ## Preview
-![Preview of Matthew Chhay's Book Search App](blob:https://imgur.com/132afc7e-9706-448f-b0a2-de04abd801c8)
+![Preview of Matthew Chhay's Book Search App](https://i.imgur.com/a7BO6Nl.png)
 
 
 ## MVP
