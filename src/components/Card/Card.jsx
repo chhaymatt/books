@@ -10,7 +10,7 @@ const Card = ({image, title, author, description, id}) => {
     return (
         <NavLink to={`search/${id}`}>
             <div className={styles.Card}>
-                <img className={styles.Card__Image} src={imageDisplay}/>
+                <img className={styles.Card__Image} src={imageDisplay} alt={titleDisplay}/>
                 <div className={styles.Card__Content}>
                     <h3 className={styles.Card__Title}>{titleDisplay}</h3>
                     <p className={styles.Card__Author}>{authorDisplay}</p>

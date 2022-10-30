@@ -1,0 +1,53 @@
+@use "../../styles/partials/palette";
+
+.PageButtons {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: palette.$group-colour;
+
+    &__Count {
+        background-color: palette.$group-colour;
+        padding: 0.5rem 1rem;
+        color: palette.$main-colour;
+        border-radius: 10px;
+    }
+
+    &__ButtonPrev {
+        width: 10rem;
+        background-color: palette.$primary-colour;
+        padding: 0.5rem 1rem;
+        color: palette.$main-colour;
+        text-decoration: none;
+        border: none;
+        font-size: 1rem;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        &:hover {
+            background-color: palette.$secondary-colour;
+            color: palette.$main-colour;
+            cursor: pointer;
+        }
+    }
+
+
+    &__ButtonNext {
+        width: 10rem;
+        background-color: palette.$primary-colour;
+        padding: 0.5rem 1rem;
+        color: palette.$main-colour;
+        text-decoration: none;
+        border: none;
+        font-size: 1rem;
+        border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        &:hover {
+            background-color: palette.$secondary-colour;
+            color: palette.$main-colour;
+            cursor: pointer;
+        }
+    }
+}

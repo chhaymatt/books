@@ -1,42 +1,51 @@
 import styles from "./Search.module.scss"
 import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import ToggleBar from "../ToggleBar/ToggleBar";
 import { useNavigate } from "react-router-dom";
 
 const Search = ({onSearch, result, formState, setFormState}) => {
 
+    // Used to navigate to book gallery
     const navigate = useNavigate()
 
+    // Whenever a user changes an input, store the value
     const onInputChange = (event) => {
         const {name, value} = event.target
         setFormState({...formState, [name]: value})
         
     }
 
+    // Whenever user changes maxResults, orderBy or a page number, submit the form
     useEffect(() => {
         if (formState.searchInput) {
             handleSubmit()
         }
-    },[formState.maxResults, formState.orderBy])
+    },[formState.maxResults, formState.orderBy, formState.startIndex])
 
+    // Submit form with the query
     const handleSubmit = () => {
         onSearch(`${formState.searchInput}&maxResults=${formState.maxResults}&orderBy=${formState.orderBy.toLowerCase()}&startIndex=${formState.startIndex}`)
         navigate("/books")
     }
 
+    // Submit form when user presses enter in the form
     const handleEnter = (event) => {
         if (event.charCode === 13 && formState.searchInput) {
             handleSubmit()
             
         }
     }
+
+    // Submit form when user clicks on the search button
     const handleClick = (event) => {
         if(formState.searchInput) {
             handleSubmit()
         }
     }
+
+    // Clear form when user clicks on the clear button
     const clearInput = () => {
         setFormState({...formState, searchInput: ""})
     }

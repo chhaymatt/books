@@ -2,7 +2,6 @@ import Star from "../Star/Star"
 import styles from "./Rating.module.scss"
 
 const Rating = ({averageRating, ratingsCount}) => {
-    let stars = "star"
     const reviewText = ratingsCount === 1 ? "review" : "reviews"
     const starText = averageRating === 1 ? "star" : "stars"
 

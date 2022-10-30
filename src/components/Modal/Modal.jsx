@@ -26,35 +26,35 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
     let languageCodeDisplay = "?"
     let languageFullDisplay = "No Language"
 
-    if (image != undefined) {
+    if (image !== undefined) {
         imageDisplay = image.thumbnail
     }
 
-    if (title != undefined) {
+    if (title !== undefined) {
         titleDisplay = title
     }
     
-    if (subtitle != undefined) {
+    if (subtitle !== undefined) {
         subtitleDisplay = subtitle
     }
 
-    if (authors != undefined) {
+    if (authors !== undefined) {
         authorDisplay = authors.join(", ")
     }
 
-    if (description != undefined) {
+    if (description !== undefined) {
         descriptionDisplay = description;
     }
 
-    if (averageRating != undefined) {
+    if (averageRating !== undefined) {
         averageRatingDisplay = averageRating
     }
 
-    if (ratingsCount != undefined) {
+    if (ratingsCount !== undefined) {
         ratingsCountDisplay = ratingsCount
     }
 
-    if (categories != undefined) {
+    if (categories !== undefined) {
         categoriesDisplay = categories.join(" • ")
         if (categories.length > 1) {
             categoriesHeading = "Categories"
@@ -62,19 +62,19 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
     
     }
 
-    if (publishedDate != undefined) {
+    if (publishedDate !== undefined) {
         publishedYearDisplay = publishedDate.slice(0,4)
     }
     
-    if (pageCount != undefined) {
+    if (pageCount !== undefined) {
         pageCountDisplay = pageCount
     }
 
-    if (publisher != undefined) {
+    if (publisher !== undefined) {
         publisherDisplay = publisher
     }
 
-    if (language != undefined) {
+    if (language !== undefined) {
         languageCodeDisplay = language.toUpperCase()
         languageFullDisplay = languageCodes[language.toLowerCase()]
     }
