@@ -2,6 +2,7 @@ import styles from "./Search.module.scss"
 import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react"
+import ToggleBar from "../ToggleBar/ToggleBar";
 
 const Search = ({onSearch, result, setResult}) => {
     const initialState = {
@@ -51,47 +52,22 @@ const Search = ({onSearch, result, setResult}) => {
             <div>
                 <div className={styles.Search__Bar}>
 
-
-
                     <FontAwesomeIcon className={styles.Search__Icons} icon={faMagnifyingGlass} />
-
 
                     <input className={styles.Search__Input} onChange={onInputChange} onKeyPress={handleEnter} type="text" name="searchInput" id="searchInput" placeholder="Search" value={formState.searchInput}/>
 
-
-
                     {formState.searchInput && <FontAwesomeIcon className={styles.Search__Clear} icon={faXmark} onClick={clearInput}/>}
-
 
                     <button className={styles.Search__Button} onClick={handleClick}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
                 </div>
 
-
-
-
-
-
                 <div className={styles.Search__ToggleBarGroup}>
-                    <div className={styles.Search__ToggleBar}>
-                        <div>Results per page</div>
-                        <select className={styles.Search__Dropdown} onChange={onInputChange} name="maxResults" >
-                            <option value={10}>10</option>
-                            <option value={20}>20</option>
-                            <option value={30}>30</option>
-                            <option value={40}>40</option>
-                        </select>
-                    </div>
-                    <div className={styles.Search__ToggleBar}>
-                        <div>Sort by</div>
-                        <select className={styles.Search__Dropdown} onChange={onInputChange} name="orderBy" >
-                            <option value="relevance">Relevance</option>
-                            <option value="newest">Newest</option>
-                        </select>
-                    </div>
+                    <ToggleBar name="maxResults" nameDisplay="Results per page" options={[10, 20, 30, 40]} onInputChange={onInputChange}></ToggleBar>
+                    <ToggleBar name="orderBy" nameDisplay="Sort by" options={["Relevance", "Newest"]} onInputChange={onInputChange}></ToggleBar>
                 </div>
             </div>
             <div className={styles.Search__Result}>
-                <p id="SearchResult">{result}</p>
+                <p>{result}</p>
             </div>
         </div>
     )

@@ -1,0 +1,20 @@
+@use "../../styles/partials/palette";
+
+.ToggleBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: palette.$main-colour;
+
+    &__Dropdown {
+        margin-left: 1rem;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        border: none;
+        color: palette.$main-colour;
+        background-color: palette.$secondary-colour;
+        cursor: pointer;
+    }
+}
