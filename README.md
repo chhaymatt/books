@@ -30,10 +30,3 @@ An app where a user can search for books from Google Book's API using React JS, 
 ## Known Bugs
 - Google Books API totalItems value fluctuates when changing the following query parameters: maxResults, orderBy or startIndex for the same searchInput
 - Clicking on the page buttons quickly may continously loop fetch requests
-
-### Sections on my portoflio
-- ✅ A landing section
-- ✅ An about section
-- ✅ A skills section
-- ✅ A project section
-- ✅ A contact section
