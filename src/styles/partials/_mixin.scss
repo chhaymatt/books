@@ -1,6 +1,6 @@
-@use "/devices.scss";
+@use "./devices";
 
-@mixin phones {
+@mixin phone {
     @media only screen and (max-width: devices.$xs) {
         @content;
     }
