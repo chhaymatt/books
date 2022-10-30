@@ -1,3 +1,5 @@
+@use "../../styles/partials/palette";
+
 .Header {
     display: flex;
     flex-direction: column;
@@ -8,7 +10,7 @@
         text-align: center;
         font-size: 4rem;
         font-family: 'Playfair Display', serif;
-        color: #D6CCC2;
+        color: palette.$primary-colour;
     }
 
     &__Text {
@@ -16,6 +18,6 @@
         text-align: center;
         font-size: 2.5rem;
         font-family: 'Playfair Display', serif;
-        color: #D6CCC2;
+        color: palette.$primary-colour;
     }
 }

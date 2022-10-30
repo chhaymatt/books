@@ -80,7 +80,7 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
     return (
         <div className={styles.Modal}>
              <div className={styles.Modal__Clear} onClick={() => navigate("/books")}>
-                <FontAwesomeIcon className={styles.Modal__Icons} icon={faXmark} />
+                <FontAwesomeIcon className={styles.Modal__Icon} icon={faXmark} />
             </div>
             <div className={styles.Modal__Top}>
                 <div>

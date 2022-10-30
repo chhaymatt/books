@@ -37,20 +37,40 @@ const Search = ({onSearch, result, setResult}) => {
             
         }
     }
-
+    const handleClick = (event) => {
+        if(formState.searchInput) {
+            handleSubmit()
+        }
+    }
     const clearInput = () => {
-        formState.searchInput = ""
-        document.getElementById("searchInput").value = ""
+        setFormState({...formState, searchInput: ""})
     }
 
     return (
         <div className={styles.Search}>
             <div>
                 <div className={styles.Search__Bar}>
+
+
+
                     <FontAwesomeIcon className={styles.Search__Icons} icon={faMagnifyingGlass} />
+
+
                     <input className={styles.Search__Input} onChange={onInputChange} onKeyPress={handleEnter} type="text" name="searchInput" id="searchInput" placeholder="Search" value={formState.searchInput}/>
-                    <FontAwesomeIcon className={styles.Search__Clear} icon={faXmark} onClick={clearInput}/>
+
+
+
+                    {formState.searchInput && <FontAwesomeIcon className={styles.Search__Clear} icon={faXmark} onClick={clearInput}/>}
+
+
+                    <button className={styles.Search__Button} onClick={handleClick}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
                 </div>
+
+
+
+
+
+
                 <div className={styles.Search__ToggleBarGroup}>
                     <div className={styles.Search__ToggleBar}>
                         <div>Results per page</div>

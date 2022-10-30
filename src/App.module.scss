@@ -1,12 +1,12 @@
+@use "./styles/partials/palette";
 .App {
     display: flex;
     flex-direction: column;
     height: 100%;
     min-height: 100vh;
-    background-color: rgba(68, 68, 68, 0.80);
+    background-color: palette.$tertiary-colour-80;
     backdrop-filter: blur(20px);
 }
-
 
 a {
     text-decoration: none;
