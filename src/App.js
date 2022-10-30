@@ -15,9 +15,9 @@ const App = () => {
   const initialState = {
     searchInput: "",
     maxResults: 10,
-    orderBy: "relevance"
+    orderBy: "relevance",
+    startIndex: 0
 }
-
 
   const [formState, setFormState] = useState(initialState)
 
@@ -31,8 +31,8 @@ const App = () => {
       <BrowserRouter>
       <Search onSearch={onSearch} result={result} setResult={setResult} formState={formState} setFormState={setFormState}></Search>
       <Routes>
-        <Route path="/books" element={<Main query={query}></Main>}></Route>
-        <Route path="/books/search/:id" element={<ModalView></ModalView>}></Route>
+        <Route path="/books" element={<Main query={query} formState={formState} setResult={setResult}></Main>}></Route>
+        <Route path="/books/search/:id" element={<ModalView setResult={setResult}></ModalView>}></Route>
       </Routes>
 
       </BrowserRouter>

@@ -6,7 +6,11 @@ const CardList = ({query, setResult, formState}) => {
     const [books, setBooks] = useState([])
 
     useEffect(() => {
-        getData(query).then((books) => setBooks(books)).catch(err => setResult(err.message))
+        getData(query).then((data) => {
+            data && setBooks(data.items)
+            data && setResult(`Found ${data.totalItems} results for "${formState.searchInput}", sorted by ${formState.orderBy}`)
+        }).catch(err => setResult(err.message))
+
     },[query])
 
     return (

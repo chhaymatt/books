@@ -4,13 +4,13 @@ import { getBookData } from "../../services/books";
 import Modal from "../../components/Modal/Modal";
 import styles from "./ModalView.module.scss"
 
-const ModalView = () => {
+const ModalView = (setResult) => {
     const { id } = useParams()
 
     const [book, setBook] = useState([])
 
     useEffect(() => {
-        getBookData(id).then((data) => setBook(data.volumeInfo))
+        getBookData(id).then((data) => setBook(data.volumeInfo)).catch(err => setResult(err.message))
     },[])
 
     return (
