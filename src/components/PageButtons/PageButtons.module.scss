@@ -1,7 +1,8 @@
 @use "../../styles/partials/palette";
+@use "../../styles/partials/mixin";
 
 .PageButtons {
-    margin: 2rem;
+    margin: 1rem;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
@@ -9,13 +10,16 @@
 
     &__Count {
         background-color: palette.$group-colour;
-        padding: 0.5rem 1rem;
+        padding: 1rem 1rem;
         color: palette.$main-colour;
         border-radius: 10px;
+        text-align: center;
+        display: flex;
+        
     }
 
     &__ButtonPrev {
-        width: 10rem;
+        width: 9rem;
         background-color: palette.$primary-colour;
         padding: 0.5rem 1rem;
         color: palette.$main-colour;
@@ -34,7 +38,7 @@
 
 
     &__ButtonNext {
-        width: 10rem;
+        width: 9rem;
         background-color: palette.$primary-colour;
         padding: 0.5rem 1rem;
         color: palette.$main-colour;
