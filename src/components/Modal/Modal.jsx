@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 import DetailGroup from "../DetailGroup/DetailGroup";
 
 const Modal = ({image, title, subtitle, authors, description, averageRating, ratingsCount, categories, publishedDate, pageCount, publisher, language}) => {
-
     const navigate = useNavigate()
+    const DOMPurify = require('dompurify')(window);
 
     // Default Values
     let titleDisplay = "No Title"
@@ -43,7 +43,7 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
     }
 
     if (description != undefined) {
-        descriptionDisplay = description.replace(/<\/?[^>]+(>|$)/g, "") // Remove unexpected HTML
+        descriptionDisplay = description;
     }
 
     if (averageRating != undefined) {
@@ -96,7 +96,7 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
             <Divider></Divider>
             <div>
                 <h3 className={styles.Modal__PublisherDescription}>Publisher Description</h3>
-                <p className={styles.Modal__PublisherDescriptionText}>{descriptionDisplay}</p>
+                <p className={styles.Modal__PublisherDescriptionText} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(descriptionDisplay)}}></p>
             </div>
             <Divider></Divider>
             <div className={styles.Modal__DetailGroups}>
