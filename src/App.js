@@ -12,6 +12,16 @@ const App = () => {
   const [query, setQuery] = useState("")
   const [result, setResult] = useState("Start by typing a few words")
 
+  const initialState = {
+    searchInput: "",
+    maxResults: 10,
+    orderBy: "relevance"
+}
+
+
+  const [formState, setFormState] = useState(initialState)
+
+
   const onSearch = (input) => {
       setQuery(input)
   }
@@ -19,7 +29,7 @@ const App = () => {
     <div className={styles.App}>
       <Header></Header>
       <BrowserRouter>
-      <Search onSearch={onSearch} result={result} setResult={setResult}></Search>
+      <Search onSearch={onSearch} result={result} setResult={setResult} formState={formState} setFormState={setFormState}></Search>
       <Routes>
         <Route path="/books" element={<Main query={query}></Main>}></Route>
         <Route path="/books/search/:id" element={<ModalView></ModalView>}></Route>

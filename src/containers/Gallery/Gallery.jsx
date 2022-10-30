@@ -2,10 +2,10 @@ import styles from "./Gallery.module.scss"
 import CardList from "../CardList/CardList"
 
 
-const Gallery = ({query, books, setBooks, result, setResult}) => {
+const Gallery = ({query, setBooks, setResult, formState}) => {
     return (
         <div className={styles.Gallery}>
-            <CardList query={query} books={books} setBooks={setBooks} result={result} setResult={setResult}></CardList>
+            <CardList query={query} setBooks={setBooks} setResult={setResult} formState={formState}></CardList>
         </div>
     )
 }

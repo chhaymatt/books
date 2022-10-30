@@ -2,13 +2,8 @@ import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card";
 import { getData } from "../../services/books";
 
-const CardList = ({query, setResult}) => {
+const CardList = ({query, setResult, formState}) => {
     const [books, setBooks] = useState([])
-
-    // Created another async function to await returned promise from getData
-    // const data = async () => {
-    //     setBooks(await getData(query))
-    // }
 
     useEffect(() => {
         getData(query).then((books) => setBooks(books)).catch(err => setResult(err.message))

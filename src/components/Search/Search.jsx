@@ -5,19 +5,10 @@ import { useEffect, useState } from "react"
 import ToggleBar from "../ToggleBar/ToggleBar";
 import { useNavigate } from "react-router-dom";
 
-const Search = ({onSearch, result, setResult}) => {
+const Search = ({onSearch, result, setResult, formState, setFormState}) => {
 
     const navigate = useNavigate()
 
-    const initialState = {
-        searchInput: "",
-        maxResults: 10,
-        orderBy: "relevance"
-    }
-
-
-    const [formState, setFormState] = useState(initialState)
-    
     const onInputChange = (event) => {
         const {name, value} = event.target
         setFormState({...formState, [name]: value})
@@ -33,7 +24,6 @@ const Search = ({onSearch, result, setResult}) => {
     const handleSubmit = () => {
         // console.log(`${formState.searchInput}&maxResults${formState.maxResults}`)
         onSearch(`${formState.searchInput}&maxResults=${formState.maxResults}&orderBy=${formState.orderBy}`)
-        setResult(`Showing ${formState.maxResults} results for "${formState.searchInput}", sorted by ${formState.orderBy}`)
         navigate("/books")
     }
 

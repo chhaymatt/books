@@ -57,13 +57,16 @@
             width: 200px;
             -webkit-box-shadow: 5px 5px 20px 0px palette.$tertiary-colour-50; 
             box-shadow: 5px 5px 20px 0px palette.$tertiary-colour-50;
-            margin-right: 1rem;
+            margin-right: 2rem;
             margin-bottom: 1rem;
         }
     }
 
     &__TopContent {
         color: palette.$main-colour;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     &__Title {

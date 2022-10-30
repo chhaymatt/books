@@ -11,7 +11,6 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
     const navigate = useNavigate()
     const DOMPurify = require('dompurify')(window);
 
-    // Default Values
     let titleDisplay = "No Title"
     let authorDisplay = "No Author"
     let descriptionDisplay = "No Description"
@@ -19,12 +18,13 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
     let subtitleDisplay = null
     let averageRatingDisplay = null
     let ratingsCountDisplay = null
-    let categoriesDisplay = "No Category"
-    let publishedYearDisplay = null
-    let pageCountDisplay = null
-    let publisherDisplay = null
-    let languageCodeDisplay = null
-    let languageFullDisplay = null
+    let categoriesHeading = "Category"
+    let categoriesDisplay = "None"
+    let publishedYearDisplay = "?"
+    let pageCountDisplay = "?"
+    let publisherDisplay = "No Publisher"
+    let languageCodeDisplay = "?"
+    let languageFullDisplay = "No Language"
 
     if (image != undefined) {
         imageDisplay = image.thumbnail
@@ -56,6 +56,10 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
 
     if (categories != undefined) {
         categoriesDisplay = categories.join(" • ")
+        if (categories.length > 1) {
+            categoriesHeading = "Categories"
+        }
+    
     }
 
     if (publishedDate != undefined) {
@@ -100,7 +104,7 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
             </div>
             <Divider></Divider>
             <div className={styles.Modal__DetailGroups}>
-                <DetailGroup heading="Category" value={<FontAwesomeIcon className={styles.DetailGroup__Value} icon={faTableCellsLarge}/>} info={categoriesDisplay}></DetailGroup>
+                <DetailGroup heading={categoriesHeading} value={<FontAwesomeIcon className={styles.DetailGroup__Value} icon={faTableCellsLarge}/>} info={categoriesDisplay}></DetailGroup>
                 <DetailGroup heading="Published" value={publishedYearDisplay} info="Year"></DetailGroup>
                 <DetailGroup heading="Length" value={pageCountDisplay} info="Pages"></DetailGroup>
                 <DetailGroup heading="Publisher" value={<FontAwesomeIcon className={styles.DetailGroup__Value} icon={faBook} />} info={publisherDisplay}></DetailGroup>
