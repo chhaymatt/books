@@ -3,8 +3,12 @@ import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react"
 import ToggleBar from "../ToggleBar/ToggleBar";
+import { useNavigate } from "react-router-dom";
 
 const Search = ({onSearch, result, setResult}) => {
+
+    const navigate = useNavigate()
+
     const initialState = {
         searchInput: "",
         maxResults: 10,
@@ -30,6 +34,7 @@ const Search = ({onSearch, result, setResult}) => {
         // console.log(`${formState.searchInput}&maxResults${formState.maxResults}`)
         onSearch(`${formState.searchInput}&maxResults=${formState.maxResults}&orderBy=${formState.orderBy}`)
         setResult(`Showing ${formState.maxResults} results for "${formState.searchInput}", sorted by ${formState.orderBy}`)
+        navigate("/books")
     }
 
     const handleEnter = (event) => {

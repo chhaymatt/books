@@ -3,7 +3,7 @@ import Footer from "./components/Footer/Footer"
 import Main from "./containers/Main/Main"
 import Header from "./containers/Header/Header"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import ModalList from "./containers/ModalView/ModalView"
+import ModalView from "./containers/ModalView/ModalView"
 import Search from "./components/Search/Search"
 import {useState} from "react"
 
@@ -18,15 +18,14 @@ const App = () => {
   return (
     <div className={styles.App}>
       <Header></Header>
-      <Search onSearch={onSearch} result={result} setResult={setResult}></Search>
       <BrowserRouter>
+      <Search onSearch={onSearch} result={result} setResult={setResult}></Search>
       <Routes>
         <Route path="/books" element={<Main query={query}></Main>}></Route>
-        <Route path="/books/search/:id" element={<ModalList></ModalList>}></Route>
+        <Route path="/books/search/:id" element={<ModalView></ModalView>}></Route>
       </Routes>
 
       </BrowserRouter>
-      {/* <BookModal></BookModal> */}
       <Footer></Footer>
     </div>
   )
