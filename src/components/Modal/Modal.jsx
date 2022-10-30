@@ -5,6 +5,7 @@ import Rating from "../Rating/Rating";
 import Divider from "../Divider/Divider";
 import { languageCodes } from "../../services/languageCodes";
 import { useNavigate } from "react-router-dom";
+import DetailGroup from "../DetailGroup/DetailGroup";
 
 const Modal = ({image, title, subtitle, authors, description, averageRating, ratingsCount, categories, publishedDate, pageCount, publisher, language}) => {
 
@@ -19,7 +20,6 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
     let averageRatingDisplay = null
     let ratingsCountDisplay = null
     let categoriesDisplay = "No Category"
-    let publishedDateDisplay = "Year"
     let publishedYearDisplay = null
     let pageCountDisplay = null
     let publisherDisplay = null
@@ -99,34 +99,13 @@ const Modal = ({image, title, subtitle, authors, description, averageRating, rat
                 <p className={styles.Modal__PublisherDescriptionText}>{descriptionDisplay}</p>
             </div>
             <Divider></Divider>
-            <div className={styles.Modal__DescriptionGroups}>
-                <div className={styles.Modal__DescriptionGroup}>
-                    <h4 className={styles.Modal__DescriptionKey}>CATEGORY</h4>
-                    <FontAwesomeIcon className={styles.Modal__DescriptionValue} icon={faTableCellsLarge} />
-                    <p className={styles.Modal__DescriptionInfo}>{categoriesDisplay}</p>
-                </div>
-                <div className={styles.Modal__DescriptionGroup}>
-                    <h4 className={styles.Modal__DescriptionKey}>PUBLISHED</h4>
-                    <h5 className={styles.Modal__DescriptionValue}>{publishedYearDisplay}</h5>
-                    <p className={styles.Modal__DescriptionInfo}>{publishedDateDisplay}</p>
-                </div>
-                <div className={styles.Modal__DescriptionGroup}>
-                    <h4 className={styles.Modal__DescriptionKey}>LENGTH</h4>
-                    <h5 className={styles.Modal__DescriptionValue}>{pageCountDisplay}</h5>
-                    <p className={styles.Modal__DescriptionInfo}>Pages</p>
-                </div>
-                <div className={styles.Modal__DescriptionGroup}>
-                    <h4 className={styles.Modal__DescriptionKey}>PUBLISHER</h4>
-                    <FontAwesomeIcon className={styles.Modal__DescriptionValue} icon={faBook} />
-                    <p className={styles.Modal__DescriptionInfo}>{publisherDisplay}</p>
-                </div>
-                <div className={styles.Modal__DescriptionGroup}>
-                    <h4 className={styles.Modal__DescriptionKey}>LANGUAGE</h4>
-                    <h5 className={styles.Modal__DescriptionValue}>{languageCodeDisplay}</h5>
-                    <p className={styles.Modal__DescriptionInfo}>{languageFullDisplay}</p>
-                </div>
+            <div className={styles.Modal__DetailGroups}>
+                <DetailGroup heading="Category" value={<FontAwesomeIcon className={styles.DetailGroup__Value} icon={faTableCellsLarge}/>} info={categoriesDisplay}></DetailGroup>
+                <DetailGroup heading="Published" value={publishedYearDisplay} info="Year"></DetailGroup>
+                <DetailGroup heading="Length" value={pageCountDisplay} info="Pages"></DetailGroup>
+                <DetailGroup heading="Publisher" value={<FontAwesomeIcon className={styles.DetailGroup__Value} icon={faBook} />} info={publisherDisplay}></DetailGroup>
+                <DetailGroup heading="Language" value={languageCodeDisplay} info={languageFullDisplay}></DetailGroup>
             </div>
-
         </div>
     )
 }

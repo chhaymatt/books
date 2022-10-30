@@ -1,0 +1,33 @@
+@use "../../styles/partials/palette";
+
+.DetailGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: palette.$group-colour;
+
+    &__Heading {
+        font-size: 0.8rem;
+        letter-spacing: 0.05rem;
+        color: palette.$tertiary-colour;
+    }
+
+    &__Value {
+        display: flex;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        padding: 0.5rem 0;
+        color: palette.$main-colour; 
+    }
+
+    &__Info {
+        font-size: 0.8rem;
+        color: palette.$main-colour;
+        text-align: center;
+    }
+
+}
