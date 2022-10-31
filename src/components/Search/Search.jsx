@@ -93,7 +93,7 @@ const Search = ({ onSearch, result, formState, setFormState }) => {
 					<ToggleBar
 						name="maxResults"
 						nameDisplay="Results per page"
-						options={[10, 20, 30, 40, 100]}
+						options={[10, 20, 30, 40]}
 						onInputChange={onInputChange}
 					></ToggleBar>
 					<ToggleBar

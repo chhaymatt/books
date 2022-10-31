@@ -1,5 +1,6 @@
 import styles from "./Gallery.module.scss";
 import Card from "../../components/Card/Card";
+
 const Gallery = ({ books }) => {
 	return (
 		<div className={styles.Gallery}>

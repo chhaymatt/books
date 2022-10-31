@@ -16,8 +16,8 @@ const ModalView = (setResult) => {
 	}, []);
 
 	return (
-		<div className={styles.ModalView}>
-			{book && (
+		book && (
+			<div className={styles.ModalView}>
 				<Modal
 					image={book.imageLinks}
 					title={book.title}
@@ -32,8 +32,8 @@ const ModalView = (setResult) => {
 					publisher={book.publisher}
 					language={book.language}
 				></Modal>
-			)}
-		</div>
+			</div>
+		)
 	);
 };
 

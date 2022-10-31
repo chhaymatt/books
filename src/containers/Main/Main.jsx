@@ -4,17 +4,17 @@ import PageButtons from "../../components/PageButtons/PageButtons";
 
 const Main = ({ formState, setFormState, pageCount, setPageCount, books }) => {
 	return (
-		<main className={styles.Main}>
-			<Gallery books={books}></Gallery>
-			{books && (
+		books && (
+			<main className={styles.Main}>
+				<Gallery books={books}></Gallery>
 				<PageButtons
 					formState={formState}
 					setFormState={setFormState}
 					pageCount={pageCount}
 					setPageCount={setPageCount}
 				></PageButtons>
-			)}
-		</main>
+			</main>
+		)
 	);
 };
 
