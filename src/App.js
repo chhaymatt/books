@@ -1,11 +1,12 @@
 import styles from "./styles/App.module.scss";
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { getData } from "./services/books";
 import Footer from "./components/Footer/Footer";
 import Main from "./containers/Main/Main";
 import Header from "./containers/Header/Header";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ModalView from "./containers/ModalView/ModalView";
 import Search from "./components/Search/Search";
-import { useState, useEffect } from "react";
 
 const App = () => {
 	const [query, setQuery] = useState("");
@@ -21,7 +22,7 @@ const App = () => {
 	};
 
 	const [formState, setFormState] = useState(initialState);
-
+	const [books, setBooks] = useState();
 	const onSearch = (input) => {
 		setQuery(input);
 	};
@@ -31,6 +32,23 @@ const App = () => {
 		setFormState({ ...formState, startIndex: 0 });
 		setPageCount(1);
 	}, [formState.maxResults, formState.orderBy, formState.searchInput]);
+
+	useEffect(() => {
+		getData(query)
+			.then((data) => {
+				data && setBooks(data.items);
+				// data && console.log(data);
+				data &&
+					setResult(
+						`Found ${data.totalItems} results for "${
+							formState.searchInput
+						}", sorted by ${formState.orderBy.toLowerCase()}`
+					);
+				data &&
+					setFormState({ ...formState, totalItems: data.totalItems });
+			})
+			.catch((err) => setResult(err.message));
+	}, [query]);
 
 	return (
 		<div className={styles.App}>
@@ -48,6 +66,7 @@ const App = () => {
 						path="/books"
 						element={
 							<Main
+								books={books}
 								query={query}
 								formState={formState}
 								setFormState={setFormState}

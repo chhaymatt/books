@@ -1,27 +1,20 @@
 import styles from "./Gallery.module.scss";
-import CardList from "../CardList/CardList";
-
-const Gallery = ({
-	query,
-	books,
-	setBooks,
-	setResult,
-	formState,
-	setFormState,
-}) => {
+import Card from "../../components/Card/Card";
+const Gallery = ({ books }) => {
 	return (
-		<>
-			<div className={styles.Gallery}>
-				<CardList
-					query={query}
-					books={books}
-					setBooks={setBooks}
-					setResult={setResult}
-					formState={formState}
-					setFormState={setFormState}
-				></CardList>
-			</div>
-		</>
+		<div className={styles.Gallery}>
+			{books &&
+				books.map((book, index) => (
+					<Card
+						key={index}
+						image={book.volumeInfo.imageLinks}
+						title={book.volumeInfo.title}
+						author={book.volumeInfo.authors}
+						description={book.volumeInfo.description}
+						id={book.id}
+					></Card>
+				))}
+		</div>
 	);
 };
 
