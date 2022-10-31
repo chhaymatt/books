@@ -1,18 +1,18 @@
 @use "../../styles/partials/palette";
 
 .Footer {
-    margin: 2rem;
-    text-align: center;
+	margin: 2rem;
+	text-align: center;
 
-    &__Link {
-        padding: 0.5rem 1rem;
-        color: palette.$primary-colour;
-        text-decoration: none;
-        border-radius: 10px;
-        
-        &:hover {
-            background-color: palette.$primary-colour;
-            color: palette.$main-colour;
-        }
-    }
+	&__Link {
+		padding: 0.5rem 1rem;
+		color: palette.$primary-colour;
+		text-decoration: none;
+		border-radius: 10px;
+
+		&:hover {
+			background-color: palette.$primary-colour;
+			color: palette.$main-colour;
+		}
+	}
 }

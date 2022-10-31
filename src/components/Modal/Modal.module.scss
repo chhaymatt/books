@@ -2,125 +2,121 @@
 @use "../../styles/partials/mixin";
 
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .Modal {
-    top: 1rem;
-    background-color: palette.$secondary-colour;
-    backdrop-filter: blur(20px);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: 1000px;
-    width: 95vw;
-    margin: 0.5rem;
+	top: 1rem;
+	background-color: palette.$secondary-colour;
+	backdrop-filter: blur(20px);
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	border-radius: 10px;
+	max-width: 1000px;
+	width: 95vw;
+	margin: 0.5rem;
 
+	&__Clear {
+		right: 1rem;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		background-color: palette.$group-colour;
+		border-radius: 100%;
+	}
 
-    &__Clear {
-        right: 1rem;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        width: 50px;
-        height: 50px;
-        background-color: palette.$group-colour;
-        border-radius: 100%;
-    }
+	&__Icon {
+		font-size: 3rem;
+		padding: 1rem;
+		position: absolute;
+		height: 1.5rem;
+		width: 1.5rem;
+		color: palette.$main-colour;
 
-    &__Icon {
-        font-size: 3rem;
-        padding: 1rem;
-        position: absolute;
-        height: 1.5rem;
-        width: 1.5rem;
-        color: palette.$main-colour;
+		&:hover {
+			color: palette.$tertiary-colour;
+			cursor: pointer;
+		}
+	}
 
-        &:hover {
-            color: palette.$tertiary-colour;
-            cursor: pointer;
-        }
-    }
+	&__Top {
+		display: flex;
+		flex-direction: row;
 
-    &__Top {
-        display: flex;
-        flex-direction: row;
+		@include mixin.phone {
+			flex-direction: column;
+		}
 
-        @include mixin.phone {
-            flex-direction: column;
-        }
+		img {
+			width: 200px;
+			-webkit-box-shadow: 5px 5px 20px 0px palette.$tertiary-colour-50;
+			box-shadow: 5px 5px 20px 0px palette.$tertiary-colour-50;
+			margin-right: 2rem;
+			margin-bottom: 1rem;
+		}
+	}
 
-        img {
-            width: 200px;
-            -webkit-box-shadow: 5px 5px 20px 0px palette.$tertiary-colour-50; 
-            box-shadow: 5px 5px 20px 0px palette.$tertiary-colour-50;
-            margin-right: 2rem;
-            margin-bottom: 1rem;
-        }
-    }
+	&__TopContent {
+		color: palette.$main-colour;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 
-    &__TopContent {
-        color: palette.$main-colour;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+	&__Title {
+		font-family: "Playfair Display", serif;
+		font-size: 2rem;
+		color: palette.$main-colour;
+	}
 
-    &__Title {
-        font-family: 'Playfair Display', serif;
-        font-size: 2rem;
-        color: palette.$main-colour;
-    }
+	&__Subtitle {
+		font-family: "Playfair Display", serif;
+		font-size: 1.5rem;
+		color: palette.$tertiary-colour;
+	}
 
-    &__Subtitle {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.5rem;
-        color: palette.$tertiary-colour;
-    }
+	&__Authors {
+		margin-top: 1rem;
+	}
 
-    &__Authors {
-        margin-top: 1rem;
-    }
+	&__PublisherDescription {
+		font-family: "Playfair Display", serif;
+		margin-bottom: 0.5rem;
+		color: palette.$tertiary-colour;
+	}
 
-    &__PublisherDescription {
-        font-family: 'Playfair Display', serif;
-        margin-bottom: 0.5rem;
-        color: palette.$tertiary-colour;
-    }
+	&__PublisherDescriptionText {
+		color: palette.$main-colour;
+		font-size: 1rem;
 
-    &__PublisherDescriptionText {
-        color: palette.$main-colour;
-        font-size: 1rem;
-        
-        p {
-            margin: 1rem 0;
+		p {
+			margin: 1rem 0;
+		}
 
-        }
+		ul {
+			margin-left: 2rem;
+		}
+	}
 
-        ul {
-            margin-left: 2rem;
-        }
+	&__DetailGroups {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 
-    }
-
-    &__DetailGroups {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    &__DetailGroup {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0.5rem;
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-        background-color: palette.$group-colour;
-    }
-
+	&__DetailGroup {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0.5rem;
+		padding: 0.5rem 1rem;
+		border-radius: 10px;
+		background-color: palette.$group-colour;
+	}
 }

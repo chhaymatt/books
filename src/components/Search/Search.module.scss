@@ -1,87 +1,86 @@
 @use "../../styles/partials/palette";
 
 .Search {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem;
 
-    &__ToggleBarGroup {
-        display: flex;
-        border-radius: 10px;
-        background-color: palette.$secondary-colour-80;
-        backdrop-filter: blur(20px);
-        user-select: none;
-    }
+	&__ToggleBarGroup {
+		display: flex;
+		border-radius: 10px;
+		background-color: palette.$secondary-colour-80;
+		backdrop-filter: blur(20px);
+		user-select: none;
+	}
 
-    &__Bar {
-        background-color: palette.$secondary-colour;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        backdrop-filter: blur(20px);
-    }
+	&__Bar {
+		background-color: palette.$secondary-colour;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 10px;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+		backdrop-filter: blur(20px);
+	}
 
-    &__Input {
-        padding: 1rem;
-        border-top: palette.$primary-colour;
-        border-bottom: palette.$primary-colour;
-        border-left: none;
-        border-right: none;;
-        outline: none;
-        font-size: 1.5rem;
-        background-color: palette.$secondary-colour;
-        backdrop-filter: blur(20px);
-        color: palette.$main-colour;
-        width: 100%;
-    }
+	&__Input {
+		padding: 1rem;
+		border-top: palette.$primary-colour;
+		border-bottom: palette.$primary-colour;
+		border-left: none;
+		border-right: none;
+		outline: none;
+		font-size: 1.5rem;
+		background-color: palette.$secondary-colour;
+		backdrop-filter: blur(20px);
+		color: palette.$main-colour;
+		width: 100%;
+	}
 
-    &__Icons {
-        padding: 0rem 1rem;
-        font-size: 1rem;
-        color: palette.$tertiary-colour-50;
-        border: none;
-    }
+	&__Icons {
+		padding: 0rem 1rem;
+		font-size: 1rem;
+		color: palette.$tertiary-colour-50;
+		border: none;
+	}
 
-    &__Clear {
-        padding: 1.25rem;
-        font-size: 1rem;
-        color: palette.$main-colour;
-        user-select: none;
+	&__Clear {
+		padding: 1.25rem;
+		font-size: 1rem;
+		color: palette.$main-colour;
+		user-select: none;
 
-        &:hover {
-            color: palette.$primary-colour;
-            cursor: pointer;
-        }
-    }
+		&:hover {
+			color: palette.$primary-colour;
+			cursor: pointer;
+		}
+	}
 
-    &__Button {
-        padding: 1rem;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        font-size: 1.5rem;
-        color: palette.$main-colour;
-        background-color: palette.$primary-colour;
-        border: 1px solid palette.$primary-colour;
-        cursor: pointer;
+	&__Button {
+		padding: 1rem;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		font-size: 1.5rem;
+		color: palette.$main-colour;
+		background-color: palette.$primary-colour;
+		border: 1px solid palette.$primary-colour;
+		cursor: pointer;
 
-        &:hover {
-            background-color: palette.$secondary-colour;
-            border: 1px solid palette.$secondary-colour;
-        }
-    }
+		&:hover {
+			background-color: palette.$secondary-colour;
+			border: 1px solid palette.$secondary-colour;
+		}
+	}
 
-    &__Result {
-        display: flex;
-        align-items: center;
-        margin-top: 1rem;
-        color: palette.$primary-colour;
-        text-align: center;
-        height: 2rem;
-        user-select: none;
-    }
-
+	&__Result {
+		display: flex;
+		align-items: center;
+		margin-top: 1rem;
+		color: palette.$primary-colour;
+		text-align: center;
+		height: 2rem;
+		user-select: none;
+	}
 }
