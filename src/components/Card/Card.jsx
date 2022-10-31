@@ -10,6 +10,7 @@ const Card = ({ image, title, author, description, id }) => {
 				<img
 					className={styles.Card__Image}
 					src={image?.thumbnail ? image.thumbnail : defaultImage}
+					alt={title ? title : "No title"}
 				/>
 				<div className={styles.Card__Content}>
 					<h3 className={styles.Card__Title}>
