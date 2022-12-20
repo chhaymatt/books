@@ -85,8 +85,8 @@ An app where a user can search for books from Google Book's API using React JS, 
 
 ## Tools Used
 
--   Create React App - create a starting React app
--   React Router - for navigating to other modal views in the URL
+-   Create React App - create a starting React app.
+-   React Router - for navigating to other modal views in the URL.
 -   Prettier - to tidy up code in spacing and structure. [Get Prettier Extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 -   Font Awesome - a library of icons that can be imported easily. [Get Font Awesome icons](https://fontawesome.com/start)
 -   Favicon.io - generate a favicon. [Generate favicon](https://favicon.io/favicon-generator/)
