@@ -30,8 +30,7 @@ const ModalView = (setResult) => {
 					publishedDate={book.publishedDate}
 					pageCount={book.pageCount}
 					publisher={book.publisher}
-					language={book.language}
-				></Modal>
+					language={book.language}></Modal>
 			</div>
 		)
 	);

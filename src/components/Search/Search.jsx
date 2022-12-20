@@ -83,8 +83,7 @@ const Search = ({ onSearch, result, formState, setFormState }) => {
 
 					<button
 						className={styles.Search__Button}
-						onClick={handleClick}
-					>
+						onClick={handleClick}>
 						<FontAwesomeIcon icon={faMagnifyingGlass} />
 					</button>
 				</div>
@@ -94,14 +93,12 @@ const Search = ({ onSearch, result, formState, setFormState }) => {
 						name="maxResults"
 						nameDisplay="Results per page"
 						options={[10, 20, 30, 40]}
-						onInputChange={onInputChange}
-					></ToggleBar>
+						onInputChange={onInputChange}></ToggleBar>
 					<ToggleBar
 						name="orderBy"
 						nameDisplay="Sort by"
 						options={["Relevance", "Newest"]}
-						onInputChange={onInputChange}
-					></ToggleBar>
+						onInputChange={onInputChange}></ToggleBar>
 				</div>
 			</div>
 			<div className={styles.Search__Result}>

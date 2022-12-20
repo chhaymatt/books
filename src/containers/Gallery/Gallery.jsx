@@ -12,8 +12,7 @@ const Gallery = ({ books }) => {
 						title={book.volumeInfo.title}
 						author={book.volumeInfo.authors}
 						description={book.volumeInfo.description}
-						id={book.id}
-					></Card>
+						id={book.id}></Card>
 				))}
 		</div>
 	);

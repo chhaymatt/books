@@ -35,8 +35,7 @@ const Modal = ({
 		<div className={styles.Modal}>
 			<div
 				className={styles.Modal__Clear}
-				onClick={() => navigate("/books")}
-			>
+				onClick={() => navigate("/books")}>
 				<FontAwesomeIcon
 					className={styles.Modal__Icon}
 					icon={faXmark}
@@ -60,8 +59,9 @@ const Modal = ({
 					{averageRating && (
 						<Rating
 							averageRating={averageRating ? averageRating : null}
-							ratingsCount={ratingsCount ? ratingsCount : null}
-						></Rating>
+							ratingsCount={
+								ratingsCount ? ratingsCount : null
+							}></Rating>
 					)}
 				</div>
 			</div>
@@ -76,8 +76,7 @@ const Modal = ({
 						__html: DOMPurify.sanitize(
 							description ? description : "No description"
 						),
-					}}
-				></p>
+					}}></p>
 			</div>
 			<Divider></Divider>
 			<div className={styles.Modal__DetailGroups}>
@@ -89,18 +88,15 @@ const Modal = ({
 							icon={faTableCellsLarge}
 						/>
 					}
-					info={categoriesDisplay}
-				></DetailGroup>
+					info={categoriesDisplay}></DetailGroup>
 				<DetailGroup
 					heading="Published"
 					value={publishedDate ? publishedDate.slice(0, 4) : "?"}
-					info="Year"
-				></DetailGroup>
+					info="Year"></DetailGroup>
 				<DetailGroup
 					heading="Length"
 					value={pageCount ? pageCount : "?"}
-					info="Pages"
-				></DetailGroup>
+					info="Pages"></DetailGroup>
 				<DetailGroup
 					heading="Publisher"
 					value={
@@ -109,8 +105,7 @@ const Modal = ({
 							icon={faBook}
 						/>
 					}
-					info={publisher ? publisher : "No Publisher"}
-				></DetailGroup>
+					info={publisher ? publisher : "No Publisher"}></DetailGroup>
 				<DetailGroup
 					heading="Language"
 					value={language ? language.toUpperCase() : "?"}
@@ -118,8 +113,7 @@ const Modal = ({
 						language
 							? languageCodes[language.toLowerCase()]
 							: "No Language"
-					}
-				></DetailGroup>
+					}></DetailGroup>
 			</div>
 		</div>
 	);

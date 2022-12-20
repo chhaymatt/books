@@ -59,8 +59,7 @@ const App = () => {
 					result={result}
 					setResult={setResult}
 					formState={formState}
-					setFormState={setFormState}
-				></Search>
+					setFormState={setFormState}></Search>
 				<Routes>
 					<Route
 						path="/books"
@@ -72,14 +71,13 @@ const App = () => {
 								setFormState={setFormState}
 								setResult={setResult}
 								pageCount={pageCount}
-								setPageCount={setPageCount}
-							></Main>
-						}
-					></Route>
+								setPageCount={setPageCount}></Main>
+						}></Route>
 					<Route
 						path="/books/search/:id"
-						element={<ModalView setResult={setResult}></ModalView>}
-					></Route>
+						element={
+							<ModalView setResult={setResult}></ModalView>
+						}></Route>
 				</Routes>
 			</BrowserRouter>
 			<Footer></Footer>

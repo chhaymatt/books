@@ -11,8 +11,7 @@ const Main = ({ formState, setFormState, pageCount, setPageCount, books }) => {
 					formState={formState}
 					setFormState={setFormState}
 					pageCount={pageCount}
-					setPageCount={setPageCount}
-				></PageButtons>
+					setPageCount={setPageCount}></PageButtons>
 			</main>
 		)
 	);

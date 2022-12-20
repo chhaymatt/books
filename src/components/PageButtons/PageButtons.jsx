@@ -47,8 +47,7 @@ const PageButtons = ({ formState, setFormState, pageCount, setPageCount }) => {
 			{prevButton && (
 				<button
 					className={styles.PageButtons__ButtonPrev}
-					onClick={previousPage}
-				>
+					onClick={previousPage}>
 					Previous Page
 				</button>
 			)}
@@ -56,8 +55,7 @@ const PageButtons = ({ formState, setFormState, pageCount, setPageCount }) => {
 			{nextButton && (
 				<button
 					className={styles.PageButtons__ButtonNext}
-					onClick={nextPage}
-				>
+					onClick={nextPage}>
 					Next Page
 				</button>
 			)}
