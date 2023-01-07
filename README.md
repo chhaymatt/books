@@ -32,7 +32,7 @@ An app where a user can search for books from Google Book's API using React JS, 
 -   Search for books based on search terms from Google's Book database
 -   Can return up to 40 results on a single page
 -   Can sort by relevance or newest
--   Moda with more information appears after clicking on a result
+-   Modal with more information appears after clicking on a result
 
 ## Technologies Used
 
@@ -69,7 +69,7 @@ An app where a user can search for books from Google Book's API using React JS, 
 ## Issues discovered during development
 
 -   Google Books API totalItems value fluctuates when changing the following query parameters: maxResults, orderBy or startIndex for the same searchInput
--   Clicking on the page buttons quickly may continously loop fetch requests
+-   Clicking on the page buttons quickly may continuously loop fetch requests
 
 ## Setup
 
